@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ElementRef, Input, Injector } from '@angular/core';
 import * as momentNs from 'moment'; const moment = momentNs;
 import {
+  AxiomHourSteps,
   AxiomSchedulerComponentCommon,
   AxiomSchedulerEvent
 } from './../axiom-scheduler/axiom-scheduler.component';
@@ -18,6 +19,7 @@ import { AxiomSchedulerHour } from './../axiom-scheduler-day-view/axiom-schedule
 })
 export class AxiomSchedulerDayColumnComponent extends AxiomSchedulerComponentCommon implements OnInit {
 
+  @Input() hourSteps: AxiomHourSteps;
   @Input() hourColumn: boolean = true;
   @Input() bounds: any;
 

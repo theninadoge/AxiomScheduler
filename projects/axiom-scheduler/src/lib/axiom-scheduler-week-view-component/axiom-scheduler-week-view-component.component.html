@@ -31,6 +31,7 @@
             <div *ngFor="let day of days"
             ax-scheduler-day-column
             [hourColumn]="false"
+            [hourSteps]="hourSteps"
             [axEventTemplate] = "axEventTemplate"
             [axEventFormatter] = "axEventFormatter"
             [axEventToolbar]="axEventToolbar"

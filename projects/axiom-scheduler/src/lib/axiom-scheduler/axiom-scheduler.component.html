@@ -45,17 +45,20 @@
 
 <div class="ax-scheduler__body" [ngSwitch]="axSchedulerView">
 
-    <div *ngSwitchCase="'day'" ax-scheduler-day-view [axEventTemplate]="axEventTemplate"
+    <div *ngSwitchCase="'day'" ax-scheduler-day-view [axEventTemplate]="axEventTemplate" [hourSteps]="axHourStep"
         [axEventFormatter]="axEventFormatter" [axDragStep]="axDragStep" [axStartDate]="date.toDate()" [axEventToolbar]="axEventToolbar">
     </div>
     <div *ngSwitchCase="'week'" ax-scheduler-week-view [axEventTemplate]="axEventTemplate" [hourSteps]="axHourStep"
         [axEventFormatter]="axEventFormatter" [axDragStep]="axDragStep" [axStartDate]="date.toDate()" [axEventToolbar]="axEventToolbar">
+
     </div>
     <div *ngSwitchCase="'month'" ax-scheduler-month-view [axEventTemplate]="axEventTemplate"
         [axEventFormatter]="axEventFormatter" [axDragStep]="axDragStep" [axStartDate]="date.toDate()" [axEventToolbar]="axEventToolbar">
+
     </div>
     <div *ngSwitchCase="'year'" ax-scheduler-year-view [axEventTemplate]="axEventTemplate"
         [axEventFormatter]="axEventFormatter" [axDragStep]="axDragStep" [axStartDate]="date.toDate()" [axEventToolbar]="axEventToolbar">
+
     </div>
 
 </div>

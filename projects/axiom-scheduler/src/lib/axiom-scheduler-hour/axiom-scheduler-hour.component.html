@@ -1,6 +1,5 @@
 <div class="d-flex flex-column flex-fill" style="height: 100%;">
-  <span *ngFor="let step of [0,1]; let i = $index" class="ax-scheduler-hour-steps flex-fill"
-        (click)="clicked(i)"
-        [ngStyle]="{'max-height.%': maxHeight}">
-  </span>
+  <span *ngFor="let step of hourSteps" class="ax-scheduler-hour-steps flex-fill"
+        (click)="clicked(step)"
+        [ngStyle]="{'max-height.%': maxHeight}"></span>
 </div>
